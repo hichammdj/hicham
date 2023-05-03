@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box Clicker</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+      #box1 {
+        background-color: red;
+      }
+      #box2 {
+        background-color: blue;
+      }
+      #box3 {
+        background-color: green;
+      }
+      #box4 {
+        background-color: yellow;
+      }
+      #results {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1" class="box">Box 1</div>
+    <div id="box2" class="box">Box 2</div>
+    <div id="box3" class="box">Box 3</div>
+    <div id="box4" class="box">Box 4</div>
+    <div id="results"></div>
+    <script>
+      const box1 = document.getElementById("box1");
+      const box2 = document.getElementById("box2");
+      const box3 = document.getElementById("box3");
+      const box4 = document.getElementById("box4");
+      const results = document.getElementById("results");
+      let clicks = [0, 0, 0, 0];
+
+      box1.addEventListener("click", function() {
+        clicks[0]++;
+        results.innerHTML = "Box 1: " + clicks[0] + " clicks<br>Box 2: " + clicks[1] + " clicks<br>Box 3: " + clicks[2] + " clicks<br>Box 4: " + clicks[3] + " clicks";
+      });
+
+      box2.addEventListener("click", function() {
+        clicks[1]++;
+        results.innerHTML = "Box 1: " + clicks[0] + " clicks<br>Box 2: " + clicks[1] + " clicks<br>Box 3: " + clicks[2] + " clicks<br>Box 4: " + clicks[3] + " clicks";
+      });
+
+      box3.addEventListener("click", function() {
+        clicks[2]++;
+        results.innerHTML = "Box 1: " + clicks[0] + " clicks<br>Box 2: " + clicks[1] + " clicks<br>Box 3: " + clicks[2] + " clicks<br>Box 4: " + clicks[3] + " clicks";
+      });
+
+      box4.addEventListener("click", function() {
+        clicks[3]++;
+        results.innerHTML = "Box 1: " + clicks[0] + " clicks<br>Box 2: " + clicks[1] + " clicks<br>Box 3: " + clicks[2] + " clicks<br>Box 4: " + clicks[3] + " clicks";
+      });
+    </script>
+  </body>
+</html>
